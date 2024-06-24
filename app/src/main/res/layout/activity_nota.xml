@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.NotaActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <!-- Judul Halaman -->
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nota Pembelian"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Nama Kedai -->
+        <TextView
+            android:id="@+id/textViewStoreName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KEDAI KUQURUYUK"
+            android:textStyle="bold"
+            android:textSize="21sp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- Alamat Kedai -->
+        <TextView
+            android:id="@+id/textViewStoreAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kantin 1 Blok A4 UPN Veteran Jawa Timur"
+            android:textSize="16sp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/textViewStoreName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- Nomor Telepon Kedai -->
+        <TextView
+            android:id="@+id/textViewStorePhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nomor Telepon Kedai: (081) 336572816"
+            android:textSize="16sp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/textViewStoreAddress"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- Garis Pemisah Atas -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintTop_toBottomOf="@+id/textViewStorePhone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <!-- Nama Pembeli -->
+        <TextView
+            android:id="@+id/textViewBuyerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Pembeli: "
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/textViewStorePhone"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="24dp" />
+
+        <!-- Waktu Pemesanan -->
+        <TextView
+            android:id="@+id/textViewOrderTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Waktu Pemesanan: "
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/textViewBuyerName"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- Metode Pembayaran -->
+        <TextView
+            android:id="@+id/textViewPaymentMethod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Metode Pembayaran: "
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/textViewOrderTime"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- Detail Pesanan -->
+        <TextView
+            android:id="@+id/textViewOrderDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detail Pesanan:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPaymentMethod"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <!-- Header Detail Pesanan -->
+        <LinearLayout
+            android:id="@+id/LinearLayoutHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/textViewOrderDetails"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Nama Produk"
+                android:textStyle="bold"
+                android:layout_weight="18"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jml"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Harga"
+                android:textStyle="bold"
+                android:layout_weight="2"
+                android:gravity="right"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Subtotal"
+                android:textStyle="bold"
+                android:layout_weight="3"
+                android:gravity="right"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewOrderDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/LinearLayoutHeader"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- Garis Pemisah Bawah -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerViewOrderDetails"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <!-- Total Pesanan -->
+        <TextView
+            android:id="@+id/textViewTotalOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Total Pesanan            : "
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerViewOrderDetails" />
+        <TextView
+            android:id="@+id/textViewTotalOrderValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Rp. 20000"
+            android:textSize="16sp"
+            android:gravity="end"
+            app:layout_constraintTop_toTopOf="@+id/textViewTotalOrder"
+            app:layout_constraintStart_toEndOf="@+id/textViewTotalOrder"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="8dp" />
+
+        <!-- Jumlah Dibayarkan -->
+        <TextView
+            android:id="@+id/textViewAmountPaid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jumlah Dibayarkan   :"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTotalOrder"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp" />
+        <TextView
+            android:id="@+id/textViewAmountPaidValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Rp. 20000"
+            android:textSize="16sp"
+            android:gravity="end"
+            app:layout_constraintTop_toTopOf="@+id/textViewAmountPaid"
+            app:layout_constraintStart_toEndOf="@+id/textViewAmountPaid"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="8dp" />
+
+        <!-- Kembalian -->
+        <TextView
+            android:id="@+id/textViewChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kembalian                   : "
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/textViewAmountPaid"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp" />
+        <!-- Nilai Kembalian -->
+        <TextView
+            android:id="@+id/textViewChangeValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Rp. 20000"
+            android:textSize="16sp"
+            android:gravity="end"
+            app:layout_constraintTop_toTopOf="@+id/textViewChange"
+            app:layout_constraintStart_toEndOf="@+id/textViewChange"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="8dp" />
+
+        <!-- Button Selesai -->
+        <Button
+            android:id="@+id/buttonFinish"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:backgroundTint="@color/button_background_color"
+            android:textColor="#FFFFFF"
+            android:text="Selesai"
+            app:cornerRadius="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewChange" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
